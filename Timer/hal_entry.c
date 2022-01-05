@@ -19,7 +19,7 @@ void change_Period(void);
 fsp_err_t set_timer_duty_cycle(uint8_t duty_cycle_percent);
 void change_Duty(void);
 
-void AGT0_1S_Callback(timer_callback_args_t *p_args)
+void AGT0_Callback(timer_callback_args_t *p_args)
 {
     if(p_args->event == TIMER_EVENT_CYCLE_END)
     {
@@ -27,7 +27,7 @@ void AGT0_1S_Callback(timer_callback_args_t *p_args)
     }
 }
 
-void GPT0_callback(timer_callback_args_t *p_args)
+void GPT1_callback(timer_callback_args_t *p_args)
 {
 
     if(p_args->event == TIMER_EVENT_CYCLE_END)
